@@ -1,0 +1,158 @@
+{
+  "platforms": {
+    "ethereum": {
+      "name": "Ethereum / Solidity",
+      "description": "Smart contract platform with EVM",
+      "key_concepts": [
+        "Gas optimization",
+        "Storage vs Memory",
+        "External vs Public",
+        "Reentrancy protection",
+        "Integer overflow/underflow",
+        "Access control patterns"
+      ]
+    },
+    "solana": {
+      "name": "Solana / Rust",
+      "description": "High-performance blockchain with Rust programs",
+      "key_concepts": [
+        "Program Derived Addresses (PDA)",
+        "Account ownership",
+        "Rent exemption",
+        "Signer validation",
+        "Cross-program invocation"
+      ]
+    }
+  },
+  "vulnerability_categories": {
+    "reentrancy": {
+      "name": "Reentrancy Attacks",
+      "severity": "CRITICAL",
+      "description": "Occurs when external calls are made before state updates",
+      "prevention": "Follow CEI pattern: Checks-Effects-Interactions"
+    },
+    "access_control": {
+      "name": "Access Control",
+      "severity": "HIGH",
+      "description": "Missing or improper authorization checks",
+      "prevention": "Use modifiers like onlyOwner, validate msg.sender"
+    },
+    "integer_overflow": {
+      "name": "Integer Overflow/Underflow",
+      "severity": "HIGH",
+      "description": "Arithmetic operations exceeding type bounds",
+      "prevention": "Use Solidity 0.8+ built-in checks or SafeMath"
+    },
+    "weak_randomness": {
+      "name": "Weak Randomness",
+      "severity": "HIGH",
+      "description": "Using predictable sources for random numbers",
+      "prevention": "Use Chainlink VRF or commit-reveal schemes"
+    },
+    "front_running": {
+      "name": "Front-Running",
+      "severity": "MEDIUM",
+      "description": "Transaction ordering exploitation",
+      "prevention": "Use commit-reveal, slippage protection, batch auctions"
+    },
+    "dos": {
+      "name": "Denial of Service",
+      "severity": "MEDIUM",
+      "description": "Gas limit or state bloat causing failures",
+      "prevention": "Avoid unbounded loops, use pull-over-push pattern"
+    }
+  },
+  "best_practices": {
+    "solidity": [
+      "Always use latest stable Solidity version",
+      "Follow CEI pattern for external calls",
+      "Use events for important state changes",
+      "Implement emergency pause mechanisms",
+      "Write comprehensive tests",
+      "Get professional audits before mainnet",
+      "Use OpenZeppelin libraries when possible",
+      "Minimize storage reads/writes",
+      "Validate all inputs with require",
+      "Document security assumptions"
+    ],
+    "solana": [
+      "Validate all account owners and signers",
+      "Check account initialization status",
+      "Verify PDA derivation",
+      "Ensure rent exemption for long-lived accounts",
+      "Handle arithmetic overflow explicitly",
+      "Use Anchor framework for safety",
+      "Validate all instruction data",
+      "Check for account writable permissions",
+      "Implement proper error handling",
+      "Test with malicious inputs"
+    ]
+  },
+  "learning_path": {
+    "week1": {
+      "title": "Fundamentals & Basic Vulnerabilities",
+      "topics": [
+        "Smart contract basics",
+        "Storage and memory",
+        "Access control",
+        "Input validation",
+        "Integer overflow"
+      ],
+      "projects": ["Secure Tip Jar", "Simple Voting System", "Token Faucet"]
+    },
+    "week2": {
+      "title": "Advanced Vulnerabilities",
+      "topics": [
+        "Reentrancy attacks",
+        "CEI pattern",
+        "Front-running",
+        "Weak randomness",
+        "Gas optimization"
+      ],
+      "projects": ["Secure Escrow", "Lottery System", "Staking Contract"]
+    },
+    "week3": {
+      "title": "Real-World Patterns",
+      "topics": [
+        "Multi-sig wallets",
+        "Upgradeable contracts",
+        "Token standards",
+        "DEX mechanics",
+        "NFT security"
+      ],
+      "projects": ["Multi-Sig Wallet", "NFT Marketplace", "Token Swap"]
+    },
+    "exam_prep": {
+      "title": "Audit Practice",
+      "activities": [
+        "Review past exploits",
+        "Practice with CTF challenges",
+        "Audit sample contracts",
+        "Run static analysis tools",
+        "Review audit reports"
+      ]
+    }
+  },
+  "audit_checklist": [
+    "Review access control on all functions",
+    "Check for reentrancy vulnerabilities",
+    "Verify integer overflow protection",
+    "Validate external call safety",
+    "Check randomness sources",
+    "Review state variable visibility",
+    "Verify proper error handling",
+    "Check for front-running risks",
+    "Review gas optimization",
+    "Validate upgrade mechanisms",
+    "Check for centralization risks",
+    "Review documentation completeness"
+  ],
+  "common_tools": {
+    "slither": "Static analysis tool for Solidity",
+    "mythril": "Security analysis tool for EVM bytecode",
+    "echidna": "Fuzzing tool for Solidity",
+    "manticore": "Symbolic execution tool",
+    "foundry": "Fast Solidity testing framework",
+    "hardhat": "Ethereum development environment"
+  }
+}

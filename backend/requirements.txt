@@ -1,0 +1,2 @@
+# Optional: Only needed if using actual Gemini API
+google-generativeai>=0.3.0
