@@ -601,7 +601,8 @@ if (command === 'idea') {
   commandIdea({ cached: args.includes('--cached') }).then(() => process.exit(0));
 } else if (command === 'start') {
   const batchIndex = args.findIndex(arg => arg.startsWith('--batch='));
-  commandStart().then(() => process.exit(0));
+  const batchSize = batchIndex >= 0 ? parseInt(args[batchIndex].split('=')[1]) : 3;
+  commandStart({ batchSize }).then(() => process.exit(0));
 } else if (command === 'resume') {
   commandResume().then(() => process.exit(0));
 } else if (command === 'audit') {

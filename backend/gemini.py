@@ -15,8 +15,8 @@ CACHE_DIR.mkdir(exist_ok=True)
 
 
 def hash_key(key: str) -> str:
-    """Generate MD5 hash for cache key"""
-    return hashlib.md5(key.encode()).hexdigest()
+    """Generate SHA-256 hash for cache key"""
+    return hashlib.sha256(key.encode()).hexdigest()
 
 
 def get_cache(key: str) -> Optional[Dict[str, Any]]:

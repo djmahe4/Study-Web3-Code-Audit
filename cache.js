@@ -5,10 +5,10 @@ const crypto = require('crypto');
 const CACHE_DIR = './.study-cache';
 
 /**
- * Generate MD5 hash for cache key
+ * Generate SHA-256 hash for cache key
  */
 function hash(input) {
-  return crypto.createHash('md5').update(input).digest('hex');
+  return crypto.createHash('sha256').update(input).digest('hex');
 }
 
 /**

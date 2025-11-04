@@ -96,7 +96,7 @@
     "vuln": "account_confusion",
     "difficulty": "beginner",
     "lines": 45,
-    "starter": "use anchor_lang::prelude::*;\n\ndeclare_id!(\"...\");\n\n#[program]\npub mod token_transfer {\n    // Add your code here\n}"
+    "starter": "use anchor_lang::prelude::*;\n\n// Replace with your program ID after deployment\ndeclare_id!(\"Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS\");\n\n#[program]\npub mod token_transfer {\n    // Add your code here\n}"
   },
   {
     "platform": "solana",
@@ -105,6 +105,6 @@
     "vuln": "pda_validation",
     "difficulty": "intermediate",
     "lines": 60,
-    "starter": "use anchor_lang::prelude::*;\n\ndeclare_id!(\"...\");\n\n#[program]\npub mod nft_mint {\n    // Add your code here\n}"
+    "starter": "use anchor_lang::prelude::*;\n\n// Replace with your program ID after deployment\ndeclare_id!(\"Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS\");\n\n#[program]\npub mod nft_mint {\n    // Add your code here\n}"
   }
 ]

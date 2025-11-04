@@ -150,7 +150,9 @@ function scanCode(code) {
   
   lines.forEach((line, index) => {
     Object.keys(STATIC_EXPLANATIONS).forEach(pattern => {
-      if (line.toLowerCase().includes(pattern.toLowerCase())) {
+      // Use word boundary matching to avoid false positives
+      const regex = new RegExp(`\\b${pattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i');
+      if (regex.test(line)) {
         findings.push({
           line: index + 1,
           pattern: pattern,
