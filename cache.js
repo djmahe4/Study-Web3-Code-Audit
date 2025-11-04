@@ -84,7 +84,7 @@ function clearCache() {
 function getCacheStats() {
   try {
     if (!fs.existsSync(CACHE_DIR)) {
-      return { count: 0, size: 0 };
+      return { count: 0, size: 0, sizeKB: '0.00' };
     }
     
     const files = fs.readdirSync(CACHE_DIR);
@@ -101,7 +101,7 @@ function getCacheStats() {
       sizeKB: (totalSize / 1024).toFixed(2)
     };
   } catch (error) {
-    return { count: 0, size: 0 };
+    return { count: 0, size: 0, sizeKB: '0.00' };
   }
 }
 
