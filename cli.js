@@ -77,7 +77,8 @@ async function commandIdea(options = {}) {
       message: 'Select platform:',
       choices: [
         { name: 'Ethereum / Solidity', value: 'ethereum' },
-        { name: 'Solana / Rust', value: 'solana' }
+        { name: 'Solana / Rust', value: 'solana' },
+        { name: 'Algorand / PyTeal', value: 'algorand' }
       ]
     }
   ]);
@@ -186,7 +187,8 @@ async function commandStart(options = {}) {
         message: 'Select platform:',
         choices: [
           { name: 'Ethereum / Solidity', value: 'ethereum' },
-          { name: 'Solana / Rust', value: 'solana' }
+          { name: 'Solana / Rust', value: 'solana' },
+          { name: 'Algorand / PyTeal', value: 'algorand' }
         ]
       }
     ]);

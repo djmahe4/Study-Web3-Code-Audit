@@ -8,6 +8,10 @@ import json
 import hashlib
 from pathlib import Path
 from typing import Optional, Dict, Any
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Cache directory
 CACHE_DIR = Path(__file__).parent / "cache"

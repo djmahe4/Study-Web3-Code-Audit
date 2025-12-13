@@ -14,19 +14,53 @@ A memory-efficient, beginner-friendly CLI tool designed to help you learn Web3 s
 - **Security-First**: Built-in vulnerability scanner with 15+ patterns
 - **Exam-Ready**: Progressive learning path from beginner to audit expert
 
-## 🚀 Quick Start
+## 🚀 Setup
 
-### Installation
+### Windows Setup
+
+For Windows users, a `setup.bat` script is provided to automate the setup process. This script will:
+1. Create a Python virtual environment in a `venv` directory.
+2. Install the required Python dependencies from `backend/requirements.txt`.
+
+To run the script, simply execute it from the project root:
+```bash
+setup.bat
+```
+After the script has finished, you can activate the virtual environment by running:
+```bash
+venv\Scripts\activate.bat
+```
+
+### macOS and Linux Setup
+
+For macOS and Linux users, a `setup.sh` script is provided to automate the setup process. This script will:
+1. Create a Python virtual environment in a `venv` directory.
+2. Install the required Python dependencies from `backend/requirements.txt`.
+
+To run the script, first make it executable:
+```bash
+chmod +x setup.sh
+```
+Then, run the script:
+```bash
+./setup.sh
+```
+After the script has finished, you can activate the virtual environment by running:
+```bash
+source venv/bin/activate
+```
+
+### Manual Setup
 
 ```bash
 # Clone the repository
 git clone https://github.com/djmahe4/Study-Web3-Code-Audit.git
 cd Study-Web3-Code-Audit
 
-# Install dependencies
+# Install Node.js dependencies
 npm install
 
-# Optional: For Gemini API integration
+# Install Python dependencies (preferably in a virtual environment)
 cd backend
 pip install -r requirements.txt
 cd ..
