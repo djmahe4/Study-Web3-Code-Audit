@@ -36,4 +36,4 @@ dist/
 build/
 *.tgz
 gemini.md
-#.env
+.env
