@@ -1,0 +1,110 @@
+[
+  {
+    "platform": "ethereum",
+    "title": "Secure Tip Jar",
+    "goal": "Learn reentrancy protection with a simple payment contract",
+    "vuln": "reentrancy",
+    "difficulty": "beginner",
+    "lines": 35,
+    "starter": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract TipJar {\n    mapping(address => uint256) public balances;\n    \n    // Add your code here\n}"
+  },
+  {
+    "platform": "ethereum",
+    "title": "Simple Voting System",
+    "goal": "Build a secure voting contract with access control",
+    "vuln": "access_control",
+    "difficulty": "beginner",
+    "lines": 40,
+    "starter": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract Voting {\n    address public owner;\n    \n    // Add your code here\n}"
+  },
+  {
+    "platform": "ethereum",
+    "title": "Token Faucet",
+    "goal": "Create a faucet that distributes tokens safely",
+    "vuln": "rate_limiting",
+    "difficulty": "beginner",
+    "lines": 45,
+    "starter": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract TokenFaucet {\n    mapping(address => uint256) public lastClaim;\n    \n    // Add your code here\n}"
+  },
+  {
+    "platform": "ethereum",
+    "title": "Secure Escrow",
+    "goal": "Build an escrow with proper CEI pattern",
+    "vuln": "state_manipulation",
+    "difficulty": "intermediate",
+    "lines": 50,
+    "starter": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract Escrow {\n    enum State { Created, Locked, Released, Refunded }\n    \n    // Add your code here\n}"
+  },
+  {
+    "platform": "ethereum",
+    "title": "NFT Marketplace",
+    "goal": "Build a basic NFT marketplace with safe transfers",
+    "vuln": "approval_race",
+    "difficulty": "intermediate",
+    "lines": 60,
+    "starter": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\nimport \"@openzeppelin/contracts/token/ERC721/IERC721.sol\";\n\ncontract NFTMarketplace {\n    // Add your code here\n}"
+  },
+  {
+    "platform": "ethereum",
+    "title": "Multi-Sig Wallet",
+    "goal": "Implement a multi-signature wallet pattern",
+    "vuln": "signature_replay",
+    "difficulty": "advanced",
+    "lines": 80,
+    "starter": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract MultiSigWallet {\n    address[] public owners;\n    uint256 public required;\n    \n    // Add your code here\n}"
+  },
+  {
+    "platform": "ethereum",
+    "title": "Time-Locked Savings",
+    "goal": "Create a savings contract with time locks",
+    "vuln": "timestamp_manipulation",
+    "difficulty": "beginner",
+    "lines": 40,
+    "starter": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract TimeLockSavings {\n    mapping(address => uint256) public deposits;\n    mapping(address => uint256) public unlockTime;\n    \n    // Add your code here\n}"
+  },
+  {
+    "platform": "ethereum",
+    "title": "Lottery System",
+    "goal": "Build a lottery with proper randomness",
+    "vuln": "weak_randomness",
+    "difficulty": "intermediate",
+    "lines": 55,
+    "starter": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract Lottery {\n    address[] public players;\n    address public winner;\n    \n    // Add your code here\n}"
+  },
+  {
+    "platform": "ethereum",
+    "title": "Token Swap",
+    "goal": "Create a simple DEX with slippage protection",
+    "vuln": "front_running",
+    "difficulty": "advanced",
+    "lines": 70,
+    "starter": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract TokenSwap {\n    // Add your code here\n}"
+  },
+  {
+    "platform": "ethereum",
+    "title": "Staking Contract",
+    "goal": "Implement a staking mechanism with rewards",
+    "vuln": "reward_calculation",
+    "difficulty": "intermediate",
+    "lines": 65,
+    "starter": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract Staking {\n    mapping(address => uint256) public stakes;\n    mapping(address => uint256) public stakingTime;\n    \n    // Add your code here\n}"
+  },
+  {
+    "platform": "solana",
+    "title": "Token Transfer Program",
+    "goal": "Build a secure Solana token transfer",
+    "vuln": "account_confusion",
+    "difficulty": "beginner",
+    "lines": 45,
+    "starter": "use anchor_lang::prelude::*;\n\n// Replace with your program ID after deployment\ndeclare_id!(\"Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS\");\n\n#[program]\npub mod token_transfer {\n    // Add your code here\n}"
+  },
+  {
+    "platform": "solana",
+    "title": "NFT Minting Program",
+    "goal": "Create a secure NFT minting program",
+    "vuln": "pda_validation",
+    "difficulty": "intermediate",
+    "lines": 60,
+    "starter": "use anchor_lang::prelude::*;\n\n// Replace with your program ID after deployment\ndeclare_id!(\"Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS\");\n\n#[program]\npub mod nft_mint {\n    // Add your code here\n}"
+  }
+]
